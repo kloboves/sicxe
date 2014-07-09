@@ -1,0 +1,28 @@
+File 'testdata/parser-in-2-good.asm' code dump:
+program_name='' start_address=0 end_address=0 entry_point=0
+********
+Dir(START) label=p2 expr=3*1000
+InsnF1(float) opcode=192 syntax=0
+InsnF2(addr) opcode=144 syntax=1 r1=0 r2=3
+InsnF2(shiftl) opcode=164 syntax=2 r1=5 r2=5
+InsnF2(shiftr) opcode=168 syntax=2 r1=4 r2=3
+InsnFS34(add) label=add opcode=24 syntax=4 addressing=literal_pool literal_id=-1 expr=add
+InsnFS34(sub) label=sub opcode=28 syntax=4 addressing=immediate expr=sub
+InsnFS34(ldf) label=ldf opcode=112 syntax=6 addressing=indirect+extended expr=ldf
+InsnFS34(j) label=j opcode=60 syntax=4 addressing=simple+indexed expr=j+add+30
+Dir(ORG) address=0 expr=1000
+Dir(EQU) label=equ assign_current=true
+Dir(EQU) label=equ expr=equ
+Dir(USE) block_id=-1
+Dir(USE) block_id=-1 block_name=use
+Dir(LTORG)
+Dir(BASE) expr=base
+Dir(NOBASE)
+Dir(EXTREF) symbol_list=extref,extdef
+Dir(EXTDEF) symbol_list=base
+Dir(MEMINIT) word=false expr=byte
+Dir(MEMINIT) word=true expr=word
+Dir(MEMINIT) label=byte word=false data_token=c'byte'
+Dir(MEMRES) word=false reservation_size=0 expr=5
+Dir(MEMRES) word=true reservation_size=0 expr=10
+Dir(END) expr=p2

@@ -1,0 +1,1 @@
+E - invalid relocation in file 'testdata/linker-in-6-1-bad.obj'

@@ -1,0 +1,75 @@
+Begin
+Node-E:000000
+Node-E:000000
+Node-E:000000
+Node-E:000000
+Node-S:000000 >>> c0
+Node-E:000001
+Node-S:000001 >>> b400
+Node-S:000003 >>> b440
+Node-S:000005 >>> 9032
+Node-S:000007 >>> 9445
+Node-S:000009 >>> a41a
+Node-S:00000b >>> a84f
+Node-E:00000d
+Node-E:00000d
+Node-E:00000d
+Node-S:00000d >>> 032ff7
+Node-S:000010 >>> 762ff4
+Node-S:000013 >>> 6d2fef
+Node-S:000016 >>> 6d0020
+Node-E:000019
+RRec-N:00001a [5] +bar
+RRec-N:00001a [5] -foo
+Node-T:000019 >>> 751003e8
+RRec-N:00001e [3] -bar
+RRec-N:00001e [3] +foo
+Node-T:00001d >>> 010000
+RRec-N:000021 [3] +bar
+Node-T:000020 >>> 6d0000
+RRec-N:000024 [3] +baz
+Node-T:000023 >>> 09000f
+Node-E:000026
+RRec-S:000026 [6]
+Node-T:000026 >>> 000007
+RRec-N:000029 [6] +bar
+RRec-N:000029 [6] -foo
+Node-T:000029 >>> 000000
+Node-S:00002c >>> 123456
+RRec-N:00002f [2] +baz
+Node-T:00002f >>> 00
+Node-E:000030
+Node-E:000030
+Node-S:000030 >>> 0143e8
+Node-E:000033
+Node-E:000033
+Node-E:001388
+Node-E:001388
+Node-E:001770
+Node-E:001770
+Node-S:001770 >>> 024fa0
+Node-S:001773 >>> 6a27ca
+Node-S:001776 >>> 734fa3
+Node-E:001779
+Node-E:001f40
+Node-S:001f40 >>> 0007d0
+Node-E:002328
+Node-S:002328 >>> 0003e8
+Node-E:00232b
+Node-S:00232b >>> 40934a000000
+Node-E:002331
+Node-E:0001da
+Node-S:0001da >>> 044e20
+Node-S:0001dd >>> 08ce20
+Node-E:0001e0
+Node-E:000033
+Node-S:000033 >>> 5321a0
+Node-S:000036 >>> 03219e
+Node-E:000039
+Node-E:00009d
+Node-S:0001c9 >>> 48656c6c6f2c20776f726c6421
+Node-E:0001d6
+Node-S:0001d6 >>> 0f
+Node-S:0001d7 >>> 000064
+Node-E:0001da
+End

@@ -1,0 +1,4 @@
+E[3:20:1] - expected symbol name or integer
+E[4:20:1] - expected symbol name or integer
+E[5:19:1] - expected symbol name or integer
+E[6:19:1] - expected symbol name or integer

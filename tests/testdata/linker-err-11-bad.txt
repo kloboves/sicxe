@@ -1,0 +1,1 @@
+E - partial linking not supported in compatibility mode

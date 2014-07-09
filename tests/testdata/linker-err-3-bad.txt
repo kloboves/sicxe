@@ -1,0 +1,1 @@
+E - invalid entry point in file 'testdata/linker-in-3-1-bad.obj'

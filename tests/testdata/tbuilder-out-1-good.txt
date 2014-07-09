@@ -1,0 +1,100 @@
+File 'testdata/tbuilder-in-1-good.asm' code dump:
+program_name='test' start_address=1000 end_address=1509 entry_point=1000
+********
+Dir(START) label=test expr=1000
+Empty
+Dir(EQU) label=x expr=10
+Dir(EXTREF) symbol_list=y
+Dir(EXTDEF) symbol_list=c
+Empty
+InsnF1(FLOAT) label=a opcode=192 syntax=0
+InsnF2(SHIFTL) label=b opcode=164 syntax=2 r1=0 r2=5
+InsnFS34(ADD) label=c opcode=24 syntax=4 addressing=literal_pool literal_id=0 expr=10
+Dir(EQU) label=d assign_current=true
+Empty
+Dir(ORG) address=1500 expr=3*500
+InsnFS34(LDCH) label=e opcode=80 syntax=5 addressing=literal_pool literal_id=1 data_token=x'0a'
+InsnFS34(LDA) opcode=0 syntax=4 addressing=literal_pool literal_id=2 data_token=x'123456'
+InsnFS34(LDF) opcode=112 syntax=6 addressing=literal_pool literal_id=3 data_token=f'0.0'
+Dir(EQU) label=n assign_current=true
+Empty
+Dir(USE) block_id=1 block_name=foo
+InsnFS34(LDA) label=f opcode=0 syntax=4 addressing=literal_pool literal_id=0 data_token=X'00000a'
+InsnFS34(LDCH) opcode=80 syntax=5 addressing=literal_pool literal_id=1 expr=2*5
+InsnFS34(LDF) opcode=112 syntax=6 addressing=literal_pool literal_id=3 data_token=x'00'
+InsnFS34(LDF) opcode=112 syntax=6 addressing=literal_pool literal_id=4 data_token=f'1234.0'
+Dir(LTORG)
+Dir(INTERNAL_LITERAL) literal_id=0
+Dir(INTERNAL_LITERAL) literal_id=1
+Dir(INTERNAL_LITERAL) literal_id=2
+Dir(INTERNAL_LITERAL) literal_id=3
+Dir(INTERNAL_LITERAL) literal_id=4
+Dir(EQU) label=g assign_current=true
+Empty
+Dir(USE) block_id=0
+Dir(MEMINIT) label=h word=true expr=d-a
+Dir(MEMINIT) label=i word=false expr=x+2
+Dir(EQU) label=j assign_current=true
+Empty
+Dir(EQU) label=k expr=a+5
+Dir(EQU) label=l expr=j-c
+Empty
+Dir(USE) block_id=2 block_name=bar
+InsnFS34(LDA) label=m opcode=0 syntax=4 addressing=literal_pool literal_id=5 expr=l
+Empty
+Dir(USE) block_id=0
+InsnFS34(LDA) opcode=0 syntax=4 addressing=literal_pool literal_id=6 expr=x
+InsnFS34(LDCH) opcode=80 syntax=5 addressing=literal_pool literal_id=7 expr=x
+InsnFS34(LDF) opcode=112 syntax=6 addressing=literal_pool literal_id=8 data_token=f'0.0'
+Empty
+Dir(EXTDEF) symbol_list=f
+Empty
+Dir(INTERNAL_LITERAL) literal_id=5
+Dir(INTERNAL_LITERAL) literal_id=6
+Dir(INTERNAL_LITERAL) literal_id=7
+Dir(INTERNAL_LITERAL) literal_id=8
+Dir(END) expr=a
+********
+NAME                       START            SIZE
+<default>                  0003e8  1000     32
+foo                        000408  1032     31
+bar                        000427  1063     3
+********
+LITERAL              TYPE  VALUE
+*0                   W     00000a           10
+*1                   B     0a               10
+*2                   W     123456           1193046
+*3                   F     000000000000     0
+*4                   F     409348000000     1234
+*5                   W     000007           7
+*6                   W     00000a           10
+*7                   B     0a               10
+*8                   F     000000000000     0
+********
+NAME                 TYPE  VALUE            BLOCK
+*0                   IR    000414  1044     foo           12
+*1                   IR    000417  1047     foo           15
+*2                   IR    000418  1048     foo           16
+*3                   IR    00041b  1051     foo           19
+*4                   IR    000421  1057     foo           25
+*5                   IR    0003fb  1019     <default>     19
+*6                   IR    0003fe  1022     <default>     22
+*7                   IR    000401  1025     <default>     25
+*8                   IR    000402  1026     <default>     26
+a                    IR    0003e8  1000     <default>     0
+b                    IR    0003e9  1001     <default>     1
+c                    X     0003eb  1003     <default>     3
+d                    IR    0003ee  1006     <default>     6
+e                    IR    0005dc  1500
+f                    X     000408  1032     foo           0
+g                    IR    000427  1063     foo           31
+h                    IR    0003ee  1006     <default>     6
+i                    IR    0003f1  1009     <default>     9
+j                    IR    0003f2  1010     <default>     10
+k                    IR    0003ed  1005
+l                    IA    000007  7
+m                    IR    000427  1063     bar           0
+n                    IR    0005e5  1509
+test                 X     0003e8  1000     <default>     0
+x                    IA    00000a  10
+y                    E

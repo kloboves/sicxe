@@ -1,0 +1,97 @@
+E[1:1:8] - program name length is limited to 6 characters
+E[2:11:5] - program name required before START directive
+E[4:4:1] - unexpected end of line
+E[5:11:4] - expected mnemonic
+E[6:11:1] - unexpected end of line
+E[7:11:6] - whitespace between '+' and mnemonic
+E[8:11:1] - cannot use '+' with directive
+E[9:11:1] - cannot use '+' with this instruction
+E[10:11:3] - invalid mnemonic
+E[12:15:1] - unexpected end of line
+E[13:14:1] - unexpected end of line
+E[14:23:3] - expected register name
+E[15:23:3] - invalid register name
+E[16:24:5] - unexpected tokens at end of line
+E[17:27:6] - unexpected tokens at end of line
+E[18:23:3] - expected register name
+E[19:23:3] - invalid register name
+E[20:23:3] - invalid register name
+E[22:26:1] - expected integer
+E[23:26:3] - operand must be less than 16
+E[24:25:3] - expected ','
+E[25:25:3] - expected ','
+E[27:24:1] - unexpected end of line
+E[28:24:1] - unexpected end of line
+E[29:25:1] - unexpected end of line
+E[30:26:1] - expected symbol name or integer
+E[31:26:4] - expected symbol name or integer
+E[32:24:1] - unmatched '['
+E[33:28:1] - expected operator
+E[34:28:4] - expected operator
+E[35:27:1] - unexpected end of line
+E[36:24:1] - unmatched '['
+E[37:29:1] - expected ']' or arithmetic operator
+E[38:35:1] - expected ']' or arithmetic operator
+E[41:23:4] - unexpected tokens at end of line
+E[42:23:7] - unexpected tokens at end of line
+E[43:23:8] - unexpected tokens at end of line
+E[44:13:1] - unexpected end of line
+E[45:23:1] - expected symbol name or integer
+E[46:23:1] - expected symbol name or integer
+E[47:23:1] - expected symbol name or integer
+E[48:23:1] - unexpected end of line
+E[49:23:1] - unexpected end of line
+E[50:23:1] - unexpected end of line
+E[51:23:1] - literal pool addressing not allowed with store instructions
+E[52:23:1] - literal pool addressing not allowed with store instructions
+E[53:23:1] - literal pool addressing not allowed with store instructions
+E[54:24:1] - expected data constant
+E[55:24:3] - expected data constant
+E[58:24:16] - literal size is limited to 6 bytes
+E[60:24:10] - literal size is limited to 6 bytes
+E[61:24:6] - float literal not allowed with this instruction
+E[62:24:6] - float literal not allowed with this instruction
+E[63:24:5] - literal size is limited to 1 byte
+E[64:24:7] - literal size is limited to 3 bytes
+E[70:23:1] - expected symbol name or integer
+E[72:29:1] - expected ','
+E[73:29:1] - expected ','
+E[74:29:1] - unexpected end of line
+E[75:31:3] - expected 'X'
+E[76:31:4] - expected 'X'
+E[77:31:3] - expected 'X'
+E[78:31:1] - expected 'X'
+E[80:37:1] - indexed addressing allowed only when using simple addressing
+E[81:30:1] - indexed addressing allowed only when using simple addressing
+E[82:30:1] - indexed addressing allowed only when using simple addressing
+E[85:15:1] - unexpected end of line
+E[86:1:4] - label not allowed before this directive
+E[87:13:1] - unexpected end of line
+E[88:1:4] - label not allowed before this directive
+E[89:13:1] - unexpected end of line
+E[90:11:3] - symbol name required before EQU directive
+E[91:23:1] - expected symbol name or integer
+E[93:23:1] - expected symbol name or integer
+E[95:23:6] - expected symbol name or integer
+E[96:1:4] - label not allowed before this directive
+E[98:23:3] - expected block name
+E[100:28:6] - unexpected tokens at end of line
+E[101:1:4] - label not allowed before this directive
+E[102:1:4] - label not allowed before this directive
+E[103:14:1] - unexpected end of line
+E[105:1:4] - label not allowed before this directive
+E[107:1:4] - label not allowed before this directive
+E[108:1:4] - label not allowed before this directive
+E[109:23:8] - external symbol name length is limited to 6 characters
+E[109:33:7] - external symbol name length is limited to 6 characters
+E[110:16:1] - unexpected end of line
+E[111:16:1] - unexpected end of line
+E[112:23:8] - external symbol name length is limited to 6 characters
+E[113:25:1] - expected ','
+E[114:25:1] - expected ','
+E[115:14:1] - unexpected end of line
+E[116:14:1] - unexpected end of line
+E[117:32:3] - unexpected tokens at end of line
+E[121:23:1] - expected symbol name or integer
+E[122:14:1] - unexpected end of line
+E[123:14:1] - unexpected end of line

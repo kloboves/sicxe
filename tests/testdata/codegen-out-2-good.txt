@@ -1,0 +1,31 @@
+Begin
+Node-E:000000
+Node-E:000000
+Node-S:000000 >>> 0322fd
+Node-E:000003
+Node-E:000003
+RRec-S:000004 [5]
+Node-T:000003 >>> 03100300
+RRec-S:000008 [5]
+Node-T:000007 >>> 6b1403e8
+Node-E:00000b
+Node-E:00000b
+Node-S:00000b >>> 0343e8
+Node-E:00000e
+Node-E:00000e
+RRec-S:00000f [5]
+Node-T:00000e >>> 031403e8
+Node-E:000012
+RRec-S:000013 [5]
+Node-T:000012 >>> 031403e8
+Node-E:000016
+Node-E:000300
+Node-S:000300 >>> 000001
+Node-E:000303
+Node-E:040000
+Node-E:040000
+Node-E:040000
+Node-S:0403e8 >>> 000002
+Node-E:0403eb
+Node-E:0403eb
+End

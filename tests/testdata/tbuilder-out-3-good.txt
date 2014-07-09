@@ -1,0 +1,21 @@
+File 'testdata/tbuilder-in-3-good.asm' code dump:
+program_name='test' start_address=1048560 end_address=1048576 entry_point=1048572
+********
+Dir(START) label=test expr=0xffff0
+Dir(USE) block_id=1 block_name=foo
+Dir(USE) block_id=0
+Dir(MEMRES) word=false reservation_size=12 expr=12
+InsnFS34(ADD) label=a opcode=24 syntax=4 addressing=immediate+extended expr=1000
+Dir(EQU) label=b assign_current=true
+Dir(END) expr=a
+********
+NAME                       START            SIZE
+<default>                  0ffff0  1048560  16
+foo                        100000  1048576  0
+********
+LITERAL              TYPE  VALUE
+********
+NAME                 TYPE  VALUE            BLOCK
+a                    IR    0ffffc  1048572  <default>     12
+b                    IR    100000  1048576  <default>     16
+test                 X     0ffff0  1048560  <default>     0

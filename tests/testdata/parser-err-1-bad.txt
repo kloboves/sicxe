@@ -1,0 +1,4 @@
+E[4:19:1] - immediate addressing not allowed with floating point instructions
+E[5:19:1] - immediate addressing not allowed with store instructions
+E[6:19:1] - immediate addressing not allowed with store instructions
+E[7:19:1] - immediate addressing not allowed with store instructions

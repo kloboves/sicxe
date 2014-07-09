@@ -1,0 +1,50 @@
+File 'testdata/tbuilder-in-2-good.asm' code dump:
+program_name='test' start_address=5000 end_address=1048576 entry_point=5006
+********
+Dir(START) label=test expr=5000
+Dir(MEMINIT) word=true data_token=f'123.123'
+InsnFS34(ADD) label=a opcode=24 syntax=4 addressing=indirect expr=test
+Dir(EQU) label=b assign_current=true
+Empty
+Dir(ORG) address=5022 expr=5022
+InsnFS34(LDA) opcode=0 syntax=4 addressing=immediate expr=15
+InsnF2(SUBR) label=k opcode=148 syntax=1 r1=1 r2=2
+Empty
+Dir(ORG) address=1048560 expr=0xffff0
+Dir(MEMRES) label=c word=false reservation_size=16 expr=16
+Dir(EQU) label=d assign_current=true
+Empty
+Dir(USE) block_id=0
+InsnFS34(LDCH) opcode=80 syntax=5 addressing=literal_pool literal_id=0 data_token=c'a'
+Dir(USE) block_id=1 block_name=foo
+Dir(USE) block_id=2 block_name=bar
+Dir(USE) block_id=0
+Empty
+Dir(EXTREF) symbol_list=e,f,g
+InsnFS34(LDA) opcode=0 syntax=4 addressing=simple expr=e-f
+Dir(MEMINIT) label=i word=true expr=e-f+g
+Dir(LTORG)
+Dir(INTERNAL_LITERAL) literal_id=0
+InsnFS34(LDA) opcode=0 syntax=4 addressing=immediate expr=10
+Dir(END) expr=a
+********
+NAME                       START            SIZE
+<default>                  001388  5000     22
+foo                        00139e  5022     0
+bar                        00139e  5022     0
+********
+LITERAL              TYPE  VALUE
+*0                   B     61               97
+********
+NAME                 TYPE  VALUE            BLOCK
+*0                   IR    00139a  5018     <default>     18
+a                    IR    00138e  5006     <default>     6
+b                    IR    001391  5009     <default>     9
+c                    IR    0ffff0  1048560
+d                    IR    100000  1048576
+e                    E
+f                    E
+g                    E
+i                    IR    001397  5015     <default>     15
+k                    IR    0013a1  5025
+test                 X     001388  5000     <default>     0

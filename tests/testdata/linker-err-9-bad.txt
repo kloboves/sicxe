@@ -1,0 +1,1 @@
+E - relocation overflow in file 'testdata/linker-in-9-1-bad.obj'

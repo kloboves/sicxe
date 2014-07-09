@@ -1,0 +1,4 @@
+E - code intersects from address 0x0007e4 to address 0x0007e5
+E - code intersects from address 0x0007f8 to address 0x0007f9
+E - code intersects from address 0x00080c to address 0x00080d
+E - code intersects from address 0x000816 to address 0x00082a

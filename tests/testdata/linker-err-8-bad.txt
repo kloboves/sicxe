@@ -1,0 +1,1 @@
+E - relocation underflow in file 'testdata/linker-in-8-1-bad.obj'

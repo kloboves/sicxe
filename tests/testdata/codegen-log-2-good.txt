@@ -1,0 +1,35 @@
+********** CODE ********************************************
+000000:              test          START     0
+000000:
+000000: 03 22 fd                   LDA       a
+000003:
+000003:              . make sure PC-relative is not selected with extended
+000003: 03 10 03 00                +LDA      a
+000007: 6b 14 03 e8                +LDB      b
+00000b:
+00000b:                            BASE      c
+00000b: 03 43 e8                   LDA       b
+00000e:
+00000e:              . make sure base is not selected with extended
+00000e: 03 14 03 e8                +LDA      b
+000012:                            BASE      a
+000012: 03 14 03 e8                +LDA      b
+000016:
+000300:                            ORG       0x300
+000300: 00 00 01     a             WORD      1
+000303:
+040000:                            ORG       0x40000
+040000:              c             EQU       *
+040000:                            REB       1000
+0403e8: 00 00 02     b             WORD      2
+0403eb:
+0403eb:                            END       test
+********** BLOCKS ******************************************
+NAME                       START            SIZE
+<default>                  000000  0        22
+********** SYMBOLS *****************************************
+NAME                 TYPE  VALUE            BLOCK
+a                    IR    000300  768
+b                    IR    0403e8  263144
+c                    IR    040000  262144
+test                 X     000000  0        <default>     0

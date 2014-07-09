@@ -1,0 +1,3 @@
+W[5:18:3] - symbol already marked as exported
+W[5:28:3] - symbol already marked as exported
+E[5:33:3] - cannot export symbol marked as imported

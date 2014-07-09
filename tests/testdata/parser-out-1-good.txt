@@ -1,0 +1,44 @@
+File 'testdata/parser-in-1-good.asm' code dump:
+program_name='' start_address=0 end_address=0 entry_point=0
+********
+Empty
+Empty
+Dir(START) label=p1 expr=0
+Empty
+InsnF1(FLOAT) label=i1 opcode=192 syntax=0
+InsnF2(ADDR) label=i2 opcode=144 syntax=1 r1=3 r2=2
+InsnF2(SHIFTL) opcode=164 syntax=2 r1=4 r2=10
+InsnF2(SHIFTR) label=i3 opcode=168 syntax=2 r1=2 r2=5
+InsnF2(TIXR) label=i4 opcode=184 syntax=3 r1=3 r2=0
+InsnFS34(RSUB) label=i5 opcode=76 syntax=10 addressing=simple
+InsnFS34(ADD) label=i6 opcode=24 syntax=4 addressing=literal_pool literal_id=-1 expr=1+2
+InsnFS34(ADD) opcode=24 syntax=4 addressing=simple+extended expr=test+3
+InsnFS34(ADD) opcode=24 syntax=4 addressing=simple+indexed expr=test+bar+3*5
+InsnFS34(J) label=i7 opcode=60 syntax=4 addressing=indirect expr=foo+10
+InsnFS34(LDF) opcode=112 syntax=6 addressing=literal_pool literal_id=-1 data_token=F'0.0'
+InsnFS34(LDF) opcode=112 syntax=6 addressing=literal_pool literal_id=-1 data_token=X'1234'
+InsnFS34(LDA) opcode=0 syntax=4 addressing=literal_pool literal_id=-1 data_token=X'123456'
+InsnFS34(LDCH) opcode=80 syntax=5 addressing=literal_pool literal_id=-1 data_token=C'a'
+Empty
+Empty
+Dir(ORG) address=0 expr=1000+0x120
+Dir(EQU) label=test assign_current=true
+Dir(EQU) label=test expr=p1+a+5*10
+Dir(USE) block_id=-1
+Dir(USE) block_id=-1 block_name=test
+Dir(LTORG)
+Dir(BASE) expr=a+10
+Dir(BASE) expr=100*0x4
+Dir(NOBASE)
+Dir(EXTREF) symbol_list=abcdef,test
+Dir(EXTDEF) symbol_list=a,b,c,d,e,f
+Dir(MEMINIT) label=a word=false expr=1+2+3
+Dir(MEMINIT) label=a word=false data_token=c'hello world'
+Dir(MEMINIT) label=a word=false data_token=F'0.0'
+Dir(MEMINIT) label=b word=true expr=1*2*3
+Dir(MEMINIT) label=b word=true data_token=x'12345'
+Dir(MEMRES) label=c word=false reservation_size=0 expr=10
+Dir(MEMRES) label=d word=true reservation_size=0 expr=5*10
+Empty
+Dir(END) expr=p1
+Empty

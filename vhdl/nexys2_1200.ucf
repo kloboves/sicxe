@@ -1,0 +1,105 @@
+# basic signals
+NET "clock_i" LOC="B8";
+NET "clock_i" PERIOD=19;
+NET "reset_i" LOC="B18";
+NET "run_toggle_i" LOC="D18";
+
+#ram
+NET "micron_chip_enable_o" LOC="R6";
+NET "micron_output_enable_o" LOC="T2";
+NET "micron_write_enable_o" LOC="N7";
+NET "micron_address_valid_o" LOC="J4";
+NET "micron_clock_o" LOC="H5";
+NET "micron_cre_o" LOC="P7";
+NET "micron_lower_byte_o" LOC="K5";
+NET "micron_upper_byte_o" LOC="K4";
+
+NET "micron_address_o<1>" LOC="J1";
+NET "micron_address_o<2>" LOC="J2";
+NET "micron_address_o<3>" LOC="H4";
+NET "micron_address_o<4>" LOC="H1";
+NET "micron_address_o<5>" LOC="H2";
+NET "micron_address_o<6>" LOC="J5";
+NET "micron_address_o<7>" LOC="H3";
+NET "micron_address_o<8>" LOC="H6";
+NET "micron_address_o<9>" LOC="F1";
+NET "micron_address_o<10>" LOC="G3";
+NET "micron_address_o<11>" LOC="G6";
+NET "micron_address_o<12>" LOC="G5";
+NET "micron_address_o<13>" LOC="G4";
+NET "micron_address_o<14>" LOC="F2";
+NET "micron_address_o<15>" LOC="E1";
+NET "micron_address_o<16>" LOC="M5";
+NET "micron_address_o<17>" LOC="E2";
+NET "micron_address_o<18>" LOC="C2";
+NET "micron_address_o<19>" LOC="C1";
+NET "micron_address_o<20>" LOC="D2";
+NET "micron_address_o<21>" LOC="K3";
+NET "micron_address_o<22>" LOC="D1";
+NET "micron_address_o<23>" LOC="K6";
+
+NET "micron_data_bus<0>" LOC="L1";
+NET "micron_data_bus<1>" LOC="L4";
+NET "micron_data_bus<2>" LOC="L6";
+NET "micron_data_bus<3>" LOC="M4";
+NET "micron_data_bus<4>" LOC="N5";
+NET "micron_data_bus<5>" LOC="P1";
+NET "micron_data_bus<6>" LOC="P2";
+NET "micron_data_bus<7>" LOC="R2";
+
+#flash
+NET "intel_chip_enable_o" LOC="R5";
+
+# serial
+NET "serial_i" LOC="U6";
+NET "serial_o" LOC="P9";
+
+# ps2
+NET "ps2_kbd_clock_i" LOC="R12";
+NET "ps2_kbd_data_i" LOC="P11";
+
+# vga
+NET "vga_hsync_o" LOC="T4";
+NET "vga_vsync_o" LOC="U3";
+NET "vga_red_o<0>" LOC="R9";
+NET "vga_red_o<1>" LOC="T8";
+NET "vga_red_o<2>" LOC="R8";
+NET "vga_green_o<0>" LOC="N8";
+NET "vga_green_o<1>" LOC="P8";
+NET "vga_green_o<2>" LOC="P6";
+NET "vga_blue_o<0>" LOC="U5";
+NET "vga_blue_o<1>" LOC="U4";
+
+# 7 segment display
+NET "seg7_cathode_o<0>" LOC="L18";
+NET "seg7_cathode_o<1>" LOC="J17";
+NET "seg7_cathode_o<2>" LOC="F18";
+NET "seg7_cathode_o<3>" LOC="H14";
+NET "seg7_cathode_o<4>" LOC="G14";
+NET "seg7_cathode_o<5>" LOC="D17";
+NET "seg7_cathode_o<6>" LOC="D16";
+NET "seg7_cathode_o<7>" LOC="C17";
+NET "seg7_anode_o<0>" LOC="F17";
+NET "seg7_anode_o<1>" LOC="H17";
+NET "seg7_anode_o<2>" LOC="C18";
+NET "seg7_anode_o<3>" LOC="F15";
+
+# other
+NET "leds_o<0>" LOC="J14";
+NET "leds_o<1>" LOC="J15";
+NET "leds_o<2>" LOC="K15";
+NET "leds_o<3>" LOC="K14";
+NET "leds_o<4>" LOC="E16";
+NET "leds_o<5>" LOC="P16";
+NET "leds_o<6>" LOC="E4";
+NET "leds_o<7>" LOC="P4";
+NET "switches_i<0>" LOC="G18";
+NET "switches_i<1>" LOC="H18";
+NET "switches_i<2>" LOC="K18";
+NET "switches_i<3>" LOC="K17";
+NET "switches_i<4>" LOC="L14";
+NET "switches_i<5>" LOC="L13";
+NET "switches_i<6>" LOC="N17";
+NET "switches_i<7>" LOC="R17";
+NET "buttons_i<0>" LOC="H13";
+NET "buttons_i<1>" LOC="E18";

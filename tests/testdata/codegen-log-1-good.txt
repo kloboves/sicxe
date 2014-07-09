@@ -1,0 +1,85 @@
+********** CODE ********************************************
+000000:              test          START     0
+000000:
+000000:                            EXTDEF
+000000:
+000000: c0                         FLOAT
+000001:
+000001: b4 00                      CLEAR     A
+000003: b4 40                      CLEAR     S
+000005: 90 32                      ADDR      B, L
+000007: 94 45        foo           SUBR      S, T
+000009: a4 1a                      SHIFTL    X, 10
+00000b: a8 4f                      SHIFTR    S, 15
+00000d:
+00000d:                            EXTREF
+00000d:
+00000d: 03 2f f7                   LDA       foo
+000010: 76 2f f4                   LDT       @foo
+000013: 6d 2f ef                   LDS       #[foo - 2]
+000016: 6d 00 20                   LDS       #0x20
+000019:
+000019: 75 10 03 e8                +LDT      #[bar - foo + 1000]
+00001d: 01 00 00                   LDA       #[foo - bar]
+000020: 6d 00 00                   LDS       #bar
+000023: 09 00 0f                   LDL       #[foo + bar - foo - bar + 15 + baz]
+000026:
+000026: 00 00 07                   WORD      foo
+000029: 00 00 00                   WORD      bar - foo
+00002c: 12 34 56                   WORD      X'123456'
+00002f: 00                         BYTE      bar - bar + foo - foo + baz
+000030:
+000030:                            BASE      10000
+000030: 01 43 e8                   LDA       #11000
+000033:                            NOBASE
+000033:
+001388:                            ORG       5000
+001388:              a             EQU       *
+001770:                            ORG       6000
+001770:                            BASE      a
+001770: 02 4f a0                   LDA       @b        . should use base addressing
+001773: 6a 27 ca                   LDB       @c        . should use PC-relative addressing
+001776: 73 4f a3                   LDF       *0
+001779:                            NOBASE
+001f40:                            ORG       8000
+001f40: 00 07 d0     c             WORD      2000
+002328:                            ORG       9000
+002328: 00 03 e8     b             WORD      1000
+00232b:                            LTORG
+00232b: 40 ..... 00  *0            WORD      X'40934a000000'
+002331:
+0001da:                            USE       example
+0001da: 04 4e 20                   LDX       20000     . should use SIC addressing
+0001dd: 08 ce 20                   LDL       20000, X  . should use SIC addressing
+0001e0:
+000033:                            USE
+000033: 53 21 a0                   LDCH      *1
+000036: 03 21 9e                   LDA       *2
+000039:                            REB       100
+00009d:                            RESW      100
+0001c9: 48 ..... 21                BYTE      X'48656c6c6f2c...
+0001d6:
+0001d6: 0f           *1            BYTE      X'0f'
+0001d7: 00 00 64     *2            WORD      X'000064'
+0001da:                            END       test
+********** BLOCKS ******************************************
+NAME                       START            SIZE
+<default>                  000000  0        474
+example                    0001da  474      6
+********** LITERALS ****************************************
+LITERAL              TYPE  VALUE
+*0                   F     40934a000000     1234.5
+*1                   B     0f               15
+*2                   W     000064           100
+********** SYMBOLS *****************************************
+NAME                 TYPE  VALUE            BLOCK
+*0                   IR    00232b  9003
+*1                   IR    0001d6  470      <default>     470
+*2                   IR    0001d7  471      <default>     471
+a                    IR    001388  5000
+b                    IR    002328  9000
+bar                  E
+baz                  E
+c                    IR    001f40  8000
+foo                  X     000007  7        <default>     7
+test                 X     000000  0        <default>     0
