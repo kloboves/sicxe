@@ -20,8 +20,15 @@ namespace sicxe {
 namespace machine {
 
 const char* kHelpMessage =
-"SIC/XE Virtual Machine 0.9\n"  // TODO
-"This is some version text help"
+"SIC/XE Virtual Machine v1.0.0 by Klemen Kloboves\n"
+"\n"
+"Usage:    sicvm [-h] object_file\n"
+"\n"
+"Options:\n"
+"\n"
+"    -h, --help\n"
+"        Display help.\n"
+"\n"
 ;
 
 namespace {
